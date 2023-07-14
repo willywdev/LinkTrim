@@ -70,3 +70,7 @@ button:active {
 .main__loading img {
   transition: all 1s ease-in-out;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: black;
+}
