@@ -8,10 +8,14 @@
   background-color: var(--secondary-color);
   border-radius: 25px;
   padding: 2rem 0 1rem 0;
+  position: relative;
 }
 .main__button-container {
   display: flex;
   gap: 1rem;
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.8rem;
 }
 .main__input-output {
   display: flex;
@@ -31,5 +35,5 @@
 .main__copy-btn {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 7px;
+  border-radius: 50%;
 }
