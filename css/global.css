@@ -62,3 +62,11 @@ button:hover {
 button:active {
   background-color: var(--accent-hover-color);
 }
+.main__loading {
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+.main__loading img {
+  transition: all 1s ease-in-out;
+}

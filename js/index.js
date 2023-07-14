@@ -6,6 +6,8 @@ let urlResult = undefined;
 const inputField = document.querySelector("[data-js='inputField']");
 const outputField = document.querySelector("[data-js='outputField']");
 const formElement = document.querySelector("[data-js='formElement']");
+const loadingIcon = document.querySelector("[data-js='loadingIcon']");
+
 window.addEventListener("load", () => formElement.reset());
 /* Starting DOM Manipulation */
 formElement.addEventListener("submit", () => {
@@ -13,6 +15,12 @@ formElement.addEventListener("submit", () => {
   console.log(requestOptions.body);
   getShortURL();
 });
+
+function loadingIconInsert() {
+  let img = document.createElement("img");
+  loadingIcon.appendChild(img);
+  img.src = "assets/Eclipse-1s-64px.svg";
+}
 /* Code from API Documentation */
 
 var requestOptions = {
@@ -24,7 +32,7 @@ var requestOptions = {
 const getShortURL = () => {
   fetch("https://api.apilayer.com/short_url/hash", requestOptions)
     .then((response) => response.text())
-    .then((outputField.value = "Waiting"))
+
     .then((result) => {
       const jsonResult = JSON.parse(result);
       console.log(jsonResult);
