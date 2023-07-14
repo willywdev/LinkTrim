@@ -20,6 +20,12 @@ function loadingIconInsert() {
   let img = document.createElement("img");
   loadingIcon.appendChild(img);
   img.src = "assets/Eclipse-1s-64px.svg";
+  img.classList.add("loading-icon");
+}
+
+function deletingIcon() {
+  let img = document.querySelector(".loading-icon");
+  img.remove();
 }
 /* Code from API Documentation */
 
