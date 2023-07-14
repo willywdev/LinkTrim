@@ -3,6 +3,7 @@
   --text-color: #112d4e;
   --accent-color: #3f72af;
   --accent-hover-color: #164b60;
+  --secondary-color: #dbe2ef;
 }
 
 @font-face {
@@ -28,4 +29,23 @@ a {
 a:hover {
   color: var(--accent-hover-color);
   text-decoration: underline solid 2px;
+}
+input {
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  height: 2rem;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid var(--accent-color);
+}
+button {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.25rem;
+  border-radius: 15px;
+}
+button:hover {
+  background-color: var(--accent-hover-color);
 }

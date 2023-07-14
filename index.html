@@ -13,7 +13,8 @@
         <a href="/" class="header__headline--link">LinkTrim</a>
       </h1>
       <p class="header__description">
-        Shorten your links with ease. Build with the
+        Shorten your links with ease. <br />
+        Build with the
         <a
           href="https://pipedream.com/apps/relink-url-shortener"
           target="_blank"
@@ -21,7 +22,25 @@
         >.
       </p>
     </header>
-    <main></main>
+    <main class="main">
+      <div class="main__button-container">
+        <button class="main__copy-btn">Copy</button>
+        <button class="main__copy-btn">Copy</button>
+      </div>
+      <form class="main__input-output">
+        <label for="input-url">Input URL:</label>
+        <input type="url" name="input-url" id="input-url" class="main__input" />
+        <label for="output-url" class="main__output-label"
+          >Shortened URL:</label
+        >
+        <input
+          type="url"
+          name="output-url"
+          id="output-url"
+          class="main__output" />
+        <button type="submit" class="main__submit">Trim link</button>
+      </form>
+    </main>
     <footer></footer>
   </body>
 </html>
