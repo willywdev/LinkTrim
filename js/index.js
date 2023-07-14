@@ -11,8 +11,8 @@ const loadingIcon = document.querySelector("[data-js='loadingIcon']");
 window.addEventListener("load", () => formElement.reset());
 /* Starting DOM Manipulation */
 formElement.addEventListener("submit", () => {
+  loadingIconInsert();
   requestOptions.body = inputField.value;
-  console.log(requestOptions.body);
   getShortURL();
 });
 
@@ -38,11 +38,10 @@ var requestOptions = {
 const getShortURL = () => {
   fetch("https://api.apilayer.com/short_url/hash", requestOptions)
     .then((response) => response.text())
-
     .then((result) => {
       const jsonResult = JSON.parse(result);
-      console.log(jsonResult);
       outputField.value = jsonResult.short_url;
     })
+    .then(deletingIcon())
     .catch((error) => console.log("error", error));
 };
