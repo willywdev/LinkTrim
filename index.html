@@ -40,9 +40,19 @@
         </button>
       </div>
 
-      <form class="main__input-output">
+      <form
+        class="main__input-output"
+        onsubmit="return false"
+        data-js="formElement">
         <label for="input-url">Input URL:</label>
-        <input type="url" name="input-url" id="input-url" class="main__input" />
+        <input
+          type="text"
+          name="input-url"
+          id="input-url"
+          class="main__input"
+          data-js="inputField"
+          pattern="^(https?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$"
+          required />
         <label for="output-url" class="main__output-label"
           >Shortened URL:</label
         >
@@ -51,8 +61,11 @@
           name="output-url"
           id="output-url"
           class="main__output"
+          data-js="outputField"
           readonly />
-        <button type="submit" class="main__submit">Trim link</button>
+        <button type="submit" class="main__submit" data-js="submitButton">
+          Trim link
+        </button>
       </form>
     </main>
     <footer class="footer">
