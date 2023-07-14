@@ -1,0 +1,31 @@
+:root {
+  --bg-color: #f9f7f7;
+  --text-color: #112d4e;
+  --accent-color: #3f72af;
+  --accent-hover-color: #164b60;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-hover-color);
+  text-decoration: underline solid 2px;
+}

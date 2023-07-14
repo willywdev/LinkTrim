@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90dvw;
+  margin-top: clamp(5%, 7.5%, 10%);
+  gap: 0;
+  background-color: #dbe2ef;
+  border-radius: 25px;
+}
+.header__headline {
+  font-size: 3rem;
+}
+.header__headline--link {
+  color: var(--text-color);
+}
+.header__headline--link:hover {
+  text-decoration: none;
+}
+.header__description {
+  margin-top: -2rem;
+  padding: 0.5rem;
+  text-align: center;
+}
