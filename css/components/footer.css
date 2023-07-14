@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90dvw;
+  gap: 0;
+  background-color: var(--secondary-color);
+  border-radius: 25px;
+}
+.footer__headline {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+.footer__github-logo {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}

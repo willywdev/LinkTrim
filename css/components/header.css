@@ -4,9 +4,9 @@
   align-items: center;
   flex-direction: column;
   width: 90dvw;
-  margin-top: clamp(5%, 7.5%, 10%);
+  margin-top: 8%;
   gap: 0;
-  background-color: #dbe2ef;
+  background-color: var(--secondary-color);
   border-radius: 25px;
 }
 .header__headline {
@@ -17,6 +17,7 @@
 }
 .header__headline--link:hover {
   text-decoration: none;
+  color: var(--accent-hover-color);
 }
 .header__description {
   margin-top: -2rem;
