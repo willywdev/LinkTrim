@@ -47,8 +47,10 @@ function loadingIconInsert() {
 }
 
 function deletingIcon() {
-  let img = document.querySelector(".loading-icon");
-  img.remove();
+  setTimeout(() => {
+    let img = document.querySelector(".loading-icon");
+    img.remove();
+  }, 1000);
 }
 
 //* Code from API Documentation
@@ -65,6 +67,6 @@ const getShortURL = () => {
       const jsonResult = JSON.parse(result);
       outputField.value = jsonResult.short_url;
     })
-    .then(deletingIcon())
-    .catch((error) => console.log("error", error));
+    .catch((error) => console.log("error", error))
+    .finally(deletingIcon);
 };
