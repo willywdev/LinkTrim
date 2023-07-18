@@ -66,6 +66,7 @@ const getShortURL = () => {
     .then((result) => {
       const jsonResult = JSON.parse(result);
       outputField.value = jsonResult.short_url;
+      outputField.style.backgroundColor = "rgb(195, 237, 192)";
     })
     .catch((error) => console.log("error", error))
     .finally(deletingIcon);
